@@ -62,3 +62,7 @@ zsamples/
 *.backup
 *.bak
 *.old
+
+data/*
+!data/.gitkeep
+
