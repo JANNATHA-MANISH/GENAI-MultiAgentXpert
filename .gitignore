@@ -3,11 +3,6 @@
 __pycache__/
 *.so
 
-# Logs and debug files
-*.log
-*.out
-*.err
-logs/
 
 # Environment-specific files
 .env
@@ -41,20 +36,12 @@ dist/
 build/
 *.egg-info/
 
-# Ignore test outputs
-coverage/
-*.coverage
-*.testresults
-junit/
 
-# Ignore files generated during runtime
-*.pid
-*.lock
-*.bak
+
 
 # Ignore output files
 *.txt
-./zsamples
+
 zsamples
 zsamples/
 
@@ -62,6 +49,7 @@ zsamples/
 *.backup
 *.bak
 *.old
+
 
 data/*
 !data/.gitkeep

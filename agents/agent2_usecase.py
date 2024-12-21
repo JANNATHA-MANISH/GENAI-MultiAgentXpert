@@ -115,24 +115,24 @@ def generate_keywords_from_use_cases(use_cases, api_key):
         input_variables=["use_cases"],
        template = """Based on the following AI/ML use cases:
 
-{use_cases}
+                {use_cases}
 
-For the use cases above,
+                For the use cases above,
 
-Generate a list of relevant keywords that can be used to search datasets on platforms like Kaggle or Hugging Face. These keywords should be in the following format:
+                Generate a list of relevant keywords that can be used to search datasets on platforms like Kaggle or Hugging Face. These keywords should be in the following format:
 
-**Use Case Title:** 
-**Description:** 
-**Keywords:** 
+                **Use Case Title:** 
+                **Description:** 
+                **Keywords:** 
 
-The keywords should include technologies, methods, applications, and relevant industry terms. Ensure that the formatting matches the example provided:  
-- Use **bold** for "Use Case Title", "Description", and "Keywords" labels only (not the content).
-- The **title** should be capitalized correctly and maintain consistent formatting.
-- Ensure that **keywords** are separated by commas, with no extra punctuation or line breaks.
-- Provide only one unbroken paragraph for each entry.
+                The keywords should include technologies, methods, applications, and relevant industry terms. Ensure that the formatting matches the example provided:  
+                - Use **bold** for "Use Case Title", "Description", and "Keywords" labels only (not the content).
+                - The **title** should be capitalized correctly and maintain consistent formatting.
+                - Ensure that **keywords** are separated by commas, with no extra punctuation or line breaks.
+                - Provide only one unbroken paragraph for each entry.
 
-Do not provide the information in any other format.
-"""
+                Do not provide the information in any other format.
+                """
 )
 
     
