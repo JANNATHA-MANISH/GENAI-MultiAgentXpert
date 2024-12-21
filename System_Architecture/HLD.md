@@ -19,7 +19,7 @@ This system aims to simplify data extraction, use case generation, and resource 
 - **Kaggle API**: Used by Agent 3 to fetch datasets.
 
 ---
-## **System Architecture**
+## **2.System Architecture**
 
 The system follows a modular approach, where the main controller (`main_agent.py`) manages the workflow by coordinating three independent agents. Each agent handles a specific task.
 
@@ -53,7 +53,7 @@ The system follows a modular approach, where the main controller (`main_agent.py
 
 ---
 
-## **Database Design**
+## **3.Database Design**
 
 This system doesn't use a traditional database but relies on file-based storage to store outputs from each agent:
 
@@ -92,7 +92,7 @@ This system doesn't use a traditional database but relies on file-based storage 
 
 ---
 
-## **Hardware, Software, and Interfaces**
+## **4.Hardware, Software, and Interfaces**
 
 ### **Hardware Requirements**:
 - **Processor**: Intel Core i5 or higher.
@@ -119,7 +119,7 @@ Since the system is designed to run from the command line, the user interacts wi
 
 ---
 
-## **6. Workflow of the User Process**
+## **5.Workflow of the User Process**
 
 ### **Workflow Diagram**:
 1. **User Action**: The user runs `main_agent.py` via the command line.
@@ -130,7 +130,7 @@ Since the system is designed to run from the command line, the user interacts wi
 
 ---
 
-## **7. Performance Specifications**
+## **6. Performance Specifications**
 
 | **Criteria**            | **Specification**                                       |
 |------------------------|---------------------------------------------------------|
@@ -142,7 +142,7 @@ Since the system is designed to run from the command line, the user interacts wi
 
 ---
 
-### ** Data Dictionary**
+### **7. Data Dictionary**
 
 A **Data Dictionary** provides a detailed description of the data used throughout the system.
 
@@ -160,7 +160,7 @@ A **Data Dictionary** provides a detailed description of the data used throughou
 
 ---
 
-### **Flow Diagrams**
+### **8.Flow Diagrams for agents**
 
 The **flowchart** for the overall system and each agent can be broken down as follows:
 
@@ -299,11 +299,11 @@ The **flowchart** for the overall system and each agent can be broken down as fo
 
 ---
 
-### **Decision Tables**
+### **9. Decision Tables**
 
 A **Decision Table** is useful for complex decision-making based on certain conditions. Here’s a decision table for handling potential errors during the text extraction process (Agent 
 
-1):
+
 
 | **Condition**                          | **Action 1**                    | **Action 2**                   | **Action 3**                    |
 |----------------------------------------|---------------------------------|--------------------------------|---------------------------------|
@@ -312,6 +312,7 @@ A **Decision Table** is useful for complex decision-making based on certain cond
 | Text extraction fails                  | Log error                       | Retry extraction or Terminate  |                                 |
 
 ---
+
 
 ## **Summary**
 
