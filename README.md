@@ -1,124 +1,276 @@
-# Multi-Agent AI Use Case Generator
+
+---
+
+# **Multi-Agent Automation System**
+
+![Project Logo](https://path-to-your-image.com)  
+*(Include an intro image or gif for your project here)*
+
+---
 
 ## **Project Overview**
-The Multi-Agent AI Use Case Generator is designed to extract information from company websites, identify company-specific details, and generate AI/ML use cases that enhance business operations, customer experience, and efficiency. The system uses cutting-edge APIs such as Jina AI for web scraping and Gemini/OpenAI for language processing.
+
+The **Multi-Agent Automation System** is a modular Python-based system designed to automate web scraping, AI-powered use case generation, and Kaggle dataset collection. The system utilizes three independent agents, each performing a specific task:
+
+1. **Agent 1**: Web Scraping - Extracts text from websites based on a list of keywords.
+2. **Agent 2**: Use Case Generator - Uses AI to generate relevant use cases from the extracted text.
+3. **Agent 3**: Resource Collector - Uses the Kaggle API to search and download datasets related to the use cases.
+
+The system is coordinated by a central controller script (`main_agent.py`), and it stores the output in various files within the `data/` directory.
 
 ---
 
-## **Project Architecture**
+## **Table of Contents**
 
-### **Folder Structure:**
+- [Project Overview](#project-overview)
+- [Architecture Diagram](#architecture-diagram)
+- [Data Storage Files](#data-storage-files)
+- [Sample Input and Output](#sample-input-and-output)
+- [Execution Instructions](#execution-instructions)
+- [License](#license)
+
+
+
+---
+
+## **Architecture Diagram**
+
+Below is the architecture diagram of the system:
+
 ```
+                          +-------------------------------+
+                          |       Main Controller        |
+                          |         main_agent.py        |
+                          +-------------------------------+
+                                     |     |     |
+        -----------------------------+     |     +--------------------------------
+        |                                  |                                  |
++------------------------+    +------------------------+    +------------------------+
+|   Agent 1: Web Scraper |    | Agent 2: Use Case Gen  |    | Agent 3: Resource Coll |
+|    agent1_webscrap.py  |    |  agent2_usecase.py     |    |  agent3_resource.py    |
++------------------------+    +------------------------+    +------------------------+
+        |                         |                         |
+        |                         |                         |
++------------------------+   +------------------------+   +------------------------+
+|   Extracted Text File  |   |  Generated Use Cases   |   |   Downloaded Datasets  |
+|   extracted_text.txt   |   | use_cases.txt          |   |   resource_links.csv   |
++------------------------+   +------------------------+   +------------------------+
+                                     |
+                          +------------------------+
+                          |                        |
+                          |   keywords.txt         |
+                          +------------------------+
+```
+
+---
+
+## **Data Storage Files**
+
+The following files are created by the system to store the output:
+
+| **File Name**         | **Data Type**   | **Description**            |
+|----------------------|------------------|----------------------------|
+| `extracted_text.txt` | Plain Text       | Extracted text from web pages based on keywords. |
+| `use_cases.txt`      | Plain Text       | Generated use cases using AI (from extracted text). |
+| `keywords.txt`       | Plain Text       | List of keywords for web scraping. |
+| `resource_links.csv` | CSV              | Resource links related to Kaggle datasets. |
+
+
+---
+
+## **Sample Input and Output**
+
+### **Sample Input:(if needed)**
+
+**`keywords.txt`**  
+This file contains a list of keywords that the scraper will use to identify relevant content for extraction from websites.
+
+| **Keyword**     |
+|-----------------|
+| `startup ideas` |
+| `entrepreneurship` |
+| `AI use cases`  |
+
+### **Sample Output:**
+
+**`extracted_text.txt`**  
+This file contains the raw text extracted from websites based on the keywords provided.
+
+| **Extracted Text** |
+|-------------------|
+| "Startup ideas are crucial for growing a business..." |
+| "Entrepreneurship requires a strong vision and strategy..." |
+
+**`use_cases.txt`**  
+This file contains the AI-generated use cases derived from the extracted text.
+
+| **Use Case** |
+|--------------|
+| "AI for business growth" |
+| "Use of AI in marketing" |
+
+**`resource_links.csv`**  
+This file contains the Kaggle dataset resources related to the generated use cases.
+
+| **Dataset Name**          | **Link**                           |
+|---------------------------|------------------------------------|
+| "Business Growth AI"      | https://www.kaggle.com/dataset-xyz |
+| "Marketing AI"            | https://www.kaggle.com/dataset-abc |
+
+---
+
+---
+
+## **File Structure**
+
+```plaintext
 /Multi-agent architecture
 │
-├── /agents
-│   ├── agent_1_web_scraper.py           # Extracts webpage text using Jina AI Reader API
-│   ├── agent_2_use_case_generator.py    # Extracts company details & generates AI/ML use cases
-│   ├── agent_3_resource_collector.py    # Collects relevant datasets and resources
-│   └── main_agent_executor.py           # Orchestrates agent execution
+├── main_agent.py            # Main controller that triggers agent execution
+├── agents/                  # Folder containing agent scripts
+│   ├── agent1_webscrap.py   # Web scraping agent
+│   ├── agent2_usecase.py    # Use case generation agent
+│   ├── agent3_resources.py  # Resource collection agent
 │
-├── /data
-│   ├── use_cases.csv                    # CSV output of generated AI/ML use cases
-│   ├── use_cases.txt                    # Detailed text file of use cases
-│   └── resource_links.txt               # Dataset links from Kaggle/HuggingFace
+├── data/                    # Folder where output files are saved
+│   ├── extracted_text.txt   # Raw text scraped from URLs
+│   ├── use_cases.txt        # Generated use cases
+│   ├── keywords.txt         # Extracted keywords
+│   ├── resource_links.csv   # Collected resource links in CSV format
 │
-├── requirements.txt                     # Project dependencies
-└── config.py                            # API keys and configurations
+├── .env                     # Contains API keys and environment variables
+├── requirements.txt         # Python dependencies
+├── myenv                    # Virtual environment directory
 ```
 
 ---
 
-## **Agents Overview**
+## **Sample Input & Output**
 
-### **1. Agent 1: Web Scraper**
-- **Description:** Extracts textual content from company websites using the Jina AI Reader API.
-- **Functionality:**
-  - Sends HTTP GET requests.
-  - Extracts and cleans webpage content.
-  - Saves the extracted text into `extracted_text.txt`.
+### **Sample Input:**
+When running `main_agent.py`, you will provide one or more URLs as input:
 
-### **2. Agent 2: Use Case Generator**
-- **Description:** Identifies company details (name, industry, services, mission) and generates AI/ML use cases.
-- **Functionality:**
-  - Uses OpenAI/Gemini APIs to process text.
-  - Extracts company-specific data points.
-  - Generates detailed AI/ML use cases with these components:
-    - **Use Case Title**
-    - **Objective:** Business goal
-    - **AI Application:** Proposed AI/ML solution
-    - **Cross-Functional Benefits:** Benefits across relevant departments
-  - Saves the output in `use_cases.csv` and `use_cases.txt`.
+```bash
+python main_agent.py "https://example1.com" "https://example2.com"
+```
 
-### **3. Agent 3: Resource Collector**
-- **Description:** Collects relevant datasets from online sources like Kaggle and HuggingFace.
-- **Functionality:**
-  - Searches relevant datasets based on use cases.
-  - Extracts and stores dataset links in `resource_links.txt`.
+### **Sample Output:**
 
-### **4. Main Agent Executor**
-- **Description:** Coordinates all agents and manages the workflow.
-- **Functionality:**
-  - Executes agents sequentially.
-  - Handles task dependencies and process monitoring.
+#### **`extracted_text.txt`**:
+
+```txt
+Text extracted from the website https://example1.com:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Text extracted from the website https://example2.com:
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```
+
+#### **`use_cases.txt`**:
+
+```txt
+Use Case 1: Text extraction from websites.
+Description: This use case involves extracting relevant data from multiple sources.
+...
+```
+
+#### **`keywords.txt`**:
+
+```txt
+Text, Website, Extraction, Use Case, AI, Automation
+```
+
+#### **`resource_links.csv`**:
+
+```csv
+URL,Category,Description
+https://resource1.com,AI,Resource for AI research
+https://resource2.com,Web Scraping,Guides for efficient web scraping
+```
 
 ---
 
-## **Installation and Setup**
 
-### **1. Clone the Repository:**
+## **Execution Instructions**
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine:
+
 ```bash
-git clone <repository-url>
-cd Multi-agent-architecture
+git clone https://github.com/your-username/multi-agent-automation.git
+cd multi-agent-automation
 ```
 
-### **2. Set Up Environment:**
-- Create a virtual environment:
+### 2. Set Up the Environment
+
+Create a virtual environment (optional but recommended):
+
 ```bash
-python -m venv venv
-source venv/bin/activate   # On Linux/Mac
-venv\Scripts\activate    # On Windows
+python -m venv menv
 ```
 
-### **3. Install Dependencies:**
+Activate the virtual environment:
+
+- On Windows:
+  ```bash
+  menv\Scripts\activate
+  ```
+- On macOS/Linux:
+  ```bash
+  source menv/bin/activate
+  ```
+
+### 3. Install Dependencies
+
+Install the required Python dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### **4. Configure API Keys:**
-- Update `config.py` with your API keys for Jina AI, OpenAI/Gemini, etc.
+### 4. Configure API Keys
 
-### **5. Run the Project:**
-```bash
-python agents/main_agent_executor.py
+Create a `.env` file in the root directory and add your API keys for Google Generative AI and Kaggle:
+
+```
+GOOGLE_API_KEY=your-google-api-key
+KAGGLE_API_KEY=your-kaggle-api-key
 ```
 
+### 5. Run the System
+
+To run the multi-agent automation system, simply execute the `main_agent.py` script:
+
+```bash
+python main_agent.py
+```
+
+
+This will trigger the sequence of tasks:
+- Web scraping (Agent 1)
+- Use case generation (Agent 2)
+- Resource collection (Agent 3)
+
+ **Run the main agent:**
+
+   To execute the scraping process, run the `main_agent.py` with the list of URLs:
+
+   ```bash
+   python main_agent.py "https://example1.com" "https://example2.com"
+   ```
+
+## **Requirements**
+
+- Python 3.9 or later
+- Libraries listed in `requirements.txt`
+- Virtual environment for isolating dependencies
+
 ---
 
-## **Technologies Used**
-- **Web Scraping:** Jina AI Reader API
-- **Language Processing:** OpenAI/Gemini API
-- **File Management:** CSV and text file handling using Python’s built-in libraries
+
+## **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-## **Project Workflow**
-1. **Web Scraper Agent:** Extracts full webpage text.
-2. **Use Case Generator Agent:** Identifies company data and generates customized AI/ML use cases.
-3. **Resource Collector Agent:** Finds relevant datasets and saves links.
-4. **Execution Management:** Orchestrates all agents and ensures seamless workflow.
-
----
-
-## **Future Enhancements**
-- Integration with LangChain for advanced task coordination.
-- Cloud-based dataset collection and storage.
-- Enhanced UI for easier interaction.
-
----
-
-**Contributors:** [Your Name]  
-**Contact:** [Your Email]  
-**License:** MIT License
-
-Let me know if you'd like additional sections or details! 🚀
-

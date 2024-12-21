@@ -54,3 +54,6 @@ zsamples/
 data/*
 !data/.gitkeep
 
+agents/
+main_agents.py
+.gitignore
