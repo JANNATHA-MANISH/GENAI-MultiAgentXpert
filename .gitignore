@@ -1,0 +1,64 @@
+# Byte-compiled / intermediate files
+*.py[cod]
+__pycache__/
+*.so
+
+# Logs and debug files
+*.log
+*.out
+*.err
+logs/
+
+# Environment-specific files
+.env
+.env.local
+*.envrc
+menv/
+.menv/
+env/
+.envrc
+
+# Ignore data files and datasets
+*.csv
+*.json
+*.xml
+*.xlsx
+*.xls
+data/
+
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore build artifacts
+dist/
+build/
+*.egg-info/
+
+# Ignore test outputs
+coverage/
+*.coverage
+*.testresults
+junit/
+
+# Ignore files generated during runtime
+*.pid
+*.lock
+*.bak
+
+# Ignore output files
+*.txt
+./zsamples
+zsamples
+zsamples/
+
+# Ignore backups
+*.backup
+*.bak
+*.old
