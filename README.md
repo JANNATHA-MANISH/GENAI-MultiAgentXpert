@@ -3,7 +3,7 @@
 
 # **Multi-Agent Automation System**
 
- ![alt text](image.png)
+ ![alt text](System_Architecture/image.png)
 
 ---
 
@@ -285,3 +285,5 @@ This will trigger the sequence of tasks:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+ ![alt text](System_Architecture/image-1.png)
