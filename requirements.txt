@@ -1,0 +1,13 @@
+openai 
+requests 
+pandas 
+langchain
+python-dotenv 
+langchain
+langchain-community
+langchain-google-genai
+kaggle
+#for different web scrapper
+#crawl4ai==0.1.0  
+#playwright==1.38.0  
+#asyncio==3.4.3  
