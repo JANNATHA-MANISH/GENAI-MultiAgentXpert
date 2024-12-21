@@ -3,8 +3,7 @@
 
 # **Multi-Agent Automation System**
 
-![Project Logo](https://path-to-your-image.com)  
-*(Include an intro image or gif for your project here)*
+![alt text](image-1.png)
 
 ---
 
@@ -19,9 +18,13 @@ The **Multi-Agent Automation System** is a modular Python-based system designed 
 The system is built using the Retrieval-Augmented Generation (RAG) framework for data retrieval and processing, LangChain for handling the flow of data between agents, and the Gemini AI API for generating AI-based outputs.
 
 Technologies Used:
+
 **RAG** (Retrieval-Augmented Generation): This system uses RAG for enhancing the quality of AI generation by retrieving relevant data before processing.
+
 **LangChain:** Utilized for building the system's workflow, making it possible to manage agents and tasks seamlessly.
+
 **Gemini AI API:** Used for generating use cases and text processing tasks via an API key.
+
 By leveraging these powerful tools, this multi-agent system can efficiently scrape websites, generate useful insights, and retrieve datasets for further analysis.
 
 The system is coordinated by a central controller script (`main_agent.py`), and it stores the output in various files within the `data/` directory.
