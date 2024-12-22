@@ -1,0 +1,18 @@
+**Use Case Title:** Predictive Maintenance for Commercial Vehicles
+**Description:** Datasets containing sensor data from commercial vehicles, including engine temperature, vibration, fuel consumption, and other relevant parameters, for predicting potential failures.
+**Keywords:** predictive maintenance, commercial vehicles, sensor data, time series analysis, anomaly detection, machine learning, predictive modeling, engine temperature, vibration, fuel consumption, downtime, maintenance costs, fleet management, Tata Motors
+
+
+**Use Case Title:** Personalized Customer Experience for Passenger Vehicles
+**Description:** Datasets containing customer data, vehicle usage patterns, service history, and feedback for building personalized recommendations and offers.
+**Keywords:** personalized recommendations, customer experience, passenger vehicles, customer segmentation, natural language processing, NLP, recommendation systems, machine learning, customer feedback, service requests, customer retention, marketing campaigns, after-sales service
+
+
+**Use Case Title:** Optimized Supply Chain for EV Battery Production
+**Description:** Datasets related to EV battery component supply chains, including demand forecasts, inventory levels, supplier information, and logistics data.
+**Keywords:** supply chain optimization, EV battery, electric vehicle, demand forecasting, inventory management, logistics, supply chain risk management, machine learning, optimization algorithms, procurement, supplier delays, geopolitical events, resilience
+
+
+**Use Case Title:** Automated Defect Detection in Manufacturing
+**Description:** Datasets containing images and videos from automotive assembly lines for training computer vision models to detect defects.
+**Keywords:** automated defect detection, computer vision, deep learning, image classification, object detection, anomaly detection, manufacturing, quality control, assembly line, automotive, defect detection, image data, video data, Tata Motors
