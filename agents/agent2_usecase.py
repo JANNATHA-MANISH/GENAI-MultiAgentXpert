@@ -52,18 +52,16 @@ def generate_additional_resources_prompt(company_description, api_key):
     additional_resources_prompt = PromptTemplate(
         input_variables=["company_description"],
         template="""
-        Based on this company description: {company_description}, perform the following:
+                Based on this company description: {company_description}, perform the following:
+                
+                1. Recommend agents to refer to reports and insights on AI and digital transformation from industry-specific sources such as McKinsey, Deloitte, and Nexocode. Include a list of relevant reports or insights related to AI and digital transformation, specifically for the company's industry.
+                
+                2. Conduct a search for industry-specific use cases, such as “how is the retail industry leveraging AI and ML” or “AI applications in automotive manufacturing.” Provide concrete examples and trends on how companies within the industry are implementing AI/ML technologies.
+                
+                3. Use the findings from steps 1 and 2 to generate detailed AI/ML use cases tailored to the company, based on its description and the best practices identified in the research.
+                
+                The goal is to deliver a thorough collection of reports, use cases, and insights that can guide actionable AI/ML strategies for the company, informed by well-known industry sources and real-world examples.
 
-        
-         Recommend agents to refer to reports and insights on AI and digital transformation from industry-specific sources like McKinsey, Deloitte, or Nexocode. Be sure to include a list of valuable reports or insights related to AI and digital transformation for the company’s industry.
-        
-         Conduct a search for industry-specific use cases. For example, "how is the retail industry leveraging AI and ML" or "AI applications in automotive manufacturing." Provide examples and trends in how companies in the relevant industry are implementing AI/ML technologies.
-
-         Use the generated research from steps 2 and 3 to inform the next step where we generate specific AI/ML use cases for the company based on the description provided.
-
-        The goal is to generate a comprehensive set of reports, use cases, and insights that can directly inform actionable AI/ML use cases for the company based on the famous insignts speciffic sources and other.
-        
-        Please ensure that the content is specific to the company’s industry and its operational needs.
         """
     )
 
