@@ -247,6 +247,7 @@ Create a `.env` file in the root directory and add your API keys for Google Gene
 ```
 GOOGLE_API_KEY=your-google-api-key
 KAGGLE_API_KEY=your-kaggle-api-key
+JINA_API_KEY  =your-kaggle-api-key
 ```
 
 ### 5. Run the System
