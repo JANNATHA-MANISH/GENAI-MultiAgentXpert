@@ -230,6 +230,7 @@ Activate the virtual environment:
 - On macOS/Linux:
   ```bash
   source menv/bin/activate
+   .\menv\Scripts\activate
   ```
 
 ### 3. Install Dependencies
