@@ -93,14 +93,47 @@ The following files are created by the system to store the output:
 
 ### **Sample Input:(if needed)**
 
-**`keywords.txt`**  
-This file contains a list of keywords that the scraper will use to identify relevant content for extraction from websites.
 
-| **Keyword**     |
-|-----------------|
-| `startup ideas` |
-| `entrepreneurship` |
-| `AI use cases`  |
+### **Indian Companies by Industry**
+
+| **Company Name**             | **Industry**       | **Segment**                                                                 | **Wikipedia Link**                                                                 |
+|-------------------------------|--------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Tata Motors](https://www.tatamotors.com)           | Automotive         | Manufacturing of commercial and passenger vehicles                          | [Visit Wikipedia](https://en.wikipedia.org/wiki/Tata_Motors)                      |
+| [Mahindra & Mahindra](https://www.mahindra.com)     | Automotive         | Manufacturing of SUVs, tractors, and commercial vehicles                    | [Visit Wikipedia](https://en.wikipedia.org/wiki/Mahindra_%26_Mahindra)            |
+| [Bajaj Auto](https://www.bajajauto.com)            | Automotive         | Manufacturing of motorcycles, scooters, and three-wheelers                 | [Visit Wikipedia](https://en.wikipedia.org/wiki/Bajaj_Auto)                       |
+| [Larsen & Toubro (L&T)](https://www.larsentoubro.com) | Construction       | Engineering, construction, and infrastructure development                   | [Visit Wikipedia](https://en.wikipedia.org/wiki/Larsen_%26_Toubro)                |
+| [DLF Limited](https://www.dlf.in)                  | Real Estate        | Residential and commercial property development                             | [Visit Wikipedia](https://en.wikipedia.org/wiki/DLF_(company))                    |
+| [Godrej Properties](https://www.godrejproperties.com)   | Real Estate        | Residential and commercial real estate projects                             | [Visit Wikipedia](https://en.wikipedia.org/wiki/Godrej_Group)                     |
+| [Reliance Industries](https://www.ril.com)         | Energy             | Oil refining, petrochemicals, and renewable energy                          | [Visit Wikipedia](https://en.wikipedia.org/wiki/Reliance_Industries)              |
+| [Indian Oil Corporation](https://iocl.com)         | Energy             | Oil refining, distribution, and marketing                                   | [Visit Wikipedia](https://en.wikipedia.org/wiki/Indian_Oil_Corporation)           |
+| [NTPC Limited](https://www.ntpc.co.in)             | Energy             | Power generation and renewable energy                                       | [Visit Wikipedia](https://en.wikipedia.org/wiki/NTPC_Limited)                     |
+| [Infosys](https://www.infosys.com)                 | IT Services        | Software development, consulting, and IT outsourcing                        | [Visit Wikipedia](https://en.wikipedia.org/wiki/Infosys)                          |
+| [TCS (Tata Consultancy Services)](https://www.tcs.com)  | IT Services        | IT services, consulting, and business solutions                             | [Visit Wikipedia](https://en.wikipedia.org/wiki/Tata_Consultancy_Services)        |
+| [Wipro](https://www.wipro.com)                     | IT Services        | IT services, consulting, and digital transformation                         | [Visit Wikipedia](https://en.wikipedia.org/wiki/Wipro)                            |
+| [HDFC Bank](https://www.hdfcbank.com)              | Finance            | Retail banking, corporate banking, and loans                                | [Visit Wikipedia](https://en.wikipedia.org/wiki/HDFC_Bank)                        |
+| [ICICI Bank](https://www.icicibank.com)            | Finance            | Retail banking, corporate banking, insurance                                | [Visit Wikipedia](https://en.wikipedia.org/wiki/ICICI_Bank)                       |
+| [Bajaj Finserv](https://www.bajajfinserv.in)       | Finance            | Financial services including lending, insurance, and wealth management      | [Visit Wikipedia](https://en.wikipedia.org/wiki/Bajaj_Finserv)                    |
+| [Apollo Hospitals](https://www.apollohospitals.com)  | Healthcare         | Multispecialty hospitals and healthcare services                            | [Visit Wikipedia](https://en.wikipedia.org/wiki/Apollo_Hospitals)                 |
+| [Fortis Healthcare](https://www.fortishealthcare.com)  | Healthcare         | Multispecialty hospitals and diagnostics                                    | [Visit Wikipedia](https://en.wikipedia.org/wiki/Fortis_Healthcare)                |
+| [Dr. Reddy's Laboratories](https://www.drreddys.com)| Pharmaceuticals    | Manufacturing of generic drugs, active pharmaceutical ingredients (APIs)    | [Visit Wikipedia](https://en.wikipedia.org/wiki/Dr._Reddy%27s_Laboratories)       |
+| [Cipla](https://www.cipla.com/)                    | Pharmaceuticals    | Manufacturing of generic drugs and respiratory care products                | [Visit Wikipedia](https://en.wikipedia.org/wiki/Cipla)                            |
+| [Flipkart](https://www.flipkart.com/)              | E-commerce/Retail  | Online retail platform for electronics, fashion, groceries, etc.           | [Visit Wikipedia](https://en.wikipedia.org/wiki/Flipkart)                         |
+
+---
+
+### **Education Companies That Require GenAI**
+
+| **Company Name**             | **Industry**       | **Segment**                                                                                     | **Wikipedia Link**                                                                 |
+|-------------------------------|--------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [BYJU'S](https://byjus.com/)                  | Education          | Online learning platform for K-12 students                                                      | [Visit Wikipedia](https://en.wikipedia.org/wiki/Byju%27s)                          |
+| [Vedantu](https://www.vedantu.com/)               | Education          | Online tutoring platform for school students                                                    | Not available on Wikipedia                                                        |
+| [Unacademy](https://unacademy.com/)              | Education          | Online education platform for competitive exams                                                 | Not available on Wikipedia                                                        |
+| [Simplilearn](https://www.simplilearn.com/)       | Education          | Online certification training courses in technology and business                                | Not available on Wikipedia                                                        |
+| [Toppr (Acquired by BYJU'S)](https://www.toppr.com/)   | Education          | Online learning app for K-12 students                                                           | Not available on Wikipedia                                                        |
+
+---
+
+
 
 ### **Sample Output:**
 
@@ -119,6 +152,15 @@ This file contains the AI-generated use cases derived from the extracted text.
 |--------------|
 | "AI for business growth" |
 | "Use of AI in marketing" |
+
+**`keywords.txt`**  
+This file contains a list of keywords that the scraper will use to identify relevant content for extraction from websites.
+
+| **Keyword**     |
+|-----------------|
+| `startup ideas` |
+| `entrepreneurship` |
+| `AI use cases`  |
 
 **`resource_links.csv`**  
 This file contains the Kaggle dataset resources related to the generated use cases.
